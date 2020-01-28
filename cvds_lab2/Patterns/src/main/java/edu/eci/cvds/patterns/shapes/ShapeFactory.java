@@ -1,4 +1,5 @@
 package edu.eci.cvds.patterns.shapes;
+import edu.eci.cvds.patterns.shapes.concrete.*;
 
 public class ShapeFactory{
     public static void main(String[] args) {
@@ -6,6 +7,14 @@ public class ShapeFactory{
     }
 
     public Shape create(RegularShapeType type){
-	if 
-    }
+	switch (type){
+			case Triangle:return new Triangle();
+			case Quadrilateral: return new Quadrilateral();
+			case Pentagon: return new Pentagon();
+			case Hexagon: return new Hexagon();
+			default : return null;
+		}
+	}
+
+    
 }
